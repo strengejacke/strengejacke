@@ -16,5 +16,5 @@ This package is not on CRAN. To install this package, type following commands in
 
 ```r
 library(devtools)
-devtools::install_github("sjPlot/strengejacke")
+devtools::install_github("strengejacke/strengejacke")
 ```
