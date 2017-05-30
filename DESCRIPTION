@@ -1,11 +1,23 @@
 Package: strengejacke
 Type: Package
-Title: Loads Packages Associated with Strenge Jacke!
-Version: 0.1.0
-Author: Daniel Lüdecke
-Maintainer: Daniel Lüdecke <d.luedecke@uke.de>
-Description: Loads packages associated with Strenge Jacke!
-License: GPL-3
 Encoding: UTF-8
+Title: Load Packages Associated with Strenge Jacke!
+Version: 0.1.0
+Date: 2017-05-31
+Author: Daniel Lüdecke <d.luedecke@uke.de>
+Maintainer: Daniel Lüdecke <d.luedecke@uke.de>
+Description: Quickly loads packages associated with Strenge Jacke!
+License: GPL-3
+Depends:
+    R (>= 3.2),
+    stats,
+    utils
+Imports:
+    sjlabelled,
+    sjmisc,
+    sjPlot,
+    sjstats
 LazyData: true
-RoxygenNote: 5.0.1
+URL: https://github.com/strengejacke/strengejacke
+BugReports: https://github.com/strengejacke/strengejacke/issues
+RoxygenNote: 6.0.1

@@ -5,9 +5,10 @@ Usage:
 ```
 library(strengejacke)
 
-> Loading sj!-packages: sjmisc
-> Loading sj!-packages: sjstats
-> Loading sj!-packages: sjPlot
+#> Loading sj!-packages: sjlabelled
+#> Loading sj!-packages: sjmisc
+#> Loading sj!-packages: sjstats
+#> Loading sj!-packages: sjPlot
 ```
 
 ## Installation
