@@ -3,10 +3,12 @@ Type: Package
 Encoding: UTF-8
 Title: Load Packages Associated with Strenge Jacke!
 Version: 0.1.0
-Date: 2017-05-31
+Date: 2017-06-12
 Author: Daniel Lüdecke <d.luedecke@uke.de>
 Maintainer: Daniel Lüdecke <d.luedecke@uke.de>
-Description: Quickly loads packages associated with Strenge Jacke!
+Description: Quickly load the 'sj'-packages, which interoperate and complement each
+             other to fulfil various data analysis tasks. The packages that will be
+             loaded are currently: 'sjlabelled', 'sjmisc', 'sjstats' and 'sjPlot'.
 License: GPL-3
 Depends:
     R (>= 3.2),

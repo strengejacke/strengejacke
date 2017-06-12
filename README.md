@@ -13,7 +13,7 @@ library(strengejacke)
 
 ## Installation
 
-This package is not on CRAN. To install this package, type following commands into the R console:
+This package is not on CRAN. To install the package, type following commands into the R console:
 
 ```r
 library(devtools)
