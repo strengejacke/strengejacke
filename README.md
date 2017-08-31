@@ -1,5 +1,5 @@
 # strengejacke
-Wrapper to quickly load the sj-packages.
+Wrapper to quickly load the sj-packages. The package checks for updates at each start.
 
 Usage:
 ```

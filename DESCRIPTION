@@ -2,8 +2,8 @@ Package: strengejacke
 Type: Package
 Encoding: UTF-8
 Title: Load Packages Associated with Strenge Jacke!
-Version: 0.1.0
-Date: 2017-06-12
+Version: 0.2.0
+Date: 2017-08-31
 Author: Daniel Lüdecke <d.luedecke@uke.de>
 Maintainer: Daniel Lüdecke <d.luedecke@uke.de>
 Description: Quickly load the 'sj'-packages, which interoperate and complement each
@@ -13,12 +13,16 @@ License: GPL-3
 Depends:
     R (>= 3.2),
     stats,
-    utils
+    utils,
+    tools
 Imports:
     sjlabelled,
     sjmisc,
     sjPlot,
-    sjstats
+    sjstats,
+    dplyr,
+    purrr,
+    tibble
 LazyData: true
 URL: https://github.com/strengejacke/strengejacke
 BugReports: https://github.com/strengejacke/strengejacke/issues
