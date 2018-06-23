@@ -1,4 +1,4 @@
-load <- c("sjlabelled", "sjmisc", "sjstats", "sjPlot")
+load <- c("ggeffects", "sjlabelled", "sjmisc", "sjstats", "sjPlot")
 
 .onAttach <- function(...) {
   needed <- load[!is_attached(load)]
