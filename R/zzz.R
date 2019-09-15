@@ -8,6 +8,8 @@
     return()
 
   easystats_versions <- .easystats_version(pkgs)
+  easystats_versions <- easystats_versions[easystats_versions$behind, ]
+
   sj_versions <- sj_versions[sj_versions$package %in% needed, ]
   suppressPackageStartupMessages(suppressWarnings(lapply(sj_versions$package, library, character.only = TRUE, warn.conflicts = FALSE)))
 
@@ -26,8 +28,8 @@
     cat("\n")
   }
 
-  if (any(easystats_versions$behind)) {
-    insight::print_color(sprintf("\nFollowing packages should be updated: %s\n", paste0(c("d", "f", "g"), collapse = ", ")), color = "red")
+  if (length(easystats_versions)) {
+    insight::print_color(sprintf("\nFollowing packages should be updated: %s\n", paste0(easystats_versions$package, collapse = ", ")), color = "red")
   }
 }
 
