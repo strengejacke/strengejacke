@@ -2,14 +2,14 @@ Package: strengejacke
 Type: Package
 Encoding: UTF-8
 Title: Load Packages Associated with Strenge Jacke!
-Version: 0.3.0
-Date: 2018-06-23
+Version: 0.4.0
+Date: 2019-09-15
 Author: Daniel Lüdecke <d.luedecke@uke.de>
 Maintainer: Daniel Lüdecke <d.luedecke@uke.de>
 Description: Quickly load the 'sj'-packages, which interoperate and complement each
              other to fulfil various data analysis tasks. The packages that will be
-             loaded are currently: 'ggeffects', 'sjlabelled', 'sjmisc', 'sjstats'
-             and 'sjPlot'.
+             loaded are currently: 'ggeffects', 'sjlabelled', 'sjmisc', 'sjstats',
+             'sjPlot' and 'esc'.
 License: GPL-3
 Depends:
     R (>= 3.2),
@@ -17,15 +17,13 @@ Depends:
     utils,
     tools
 Imports:
+    esc,
     ggeffects,
     sjlabelled,
     sjmisc,
     sjPlot,
-    sjstats,
-    dplyr,
-    purrr,
-    tibble
+    sjstats
 LazyData: true
 URL: https://github.com/strengejacke/strengejacke
 BugReports: https://github.com/strengejacke/strengejacke/issues
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1

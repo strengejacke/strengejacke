@@ -1,13 +1,28 @@
-load <- c("ggeffects", "sjlabelled", "sjmisc", "sjstats", "sjPlot")
-
 .onAttach <- function(...) {
-  needed <- load[!is_attached(load)]
+  sj_versions <- sj_version()
+  sj_pkgs <- c("sjlabelled", "sjmisc", "sjstats", "sjPlot", "ggeffects", "esc")
+  needed <- sj_pkgs[!is_attached(sj_pkgs)]
 
   if (length(needed) == 0)
     return()
 
-  packageStartupMessage(paste0("Loading sj!-packages: ", needed, collapse = "\n"))
-  lapply(needed, library, character.only = TRUE, warn.conflicts = FALSE)
+  sj_versions <- sj_versions[sj_versions$package %in% needed, ]
+  suppressPackageStartupMessages(suppressWarnings(lapply(sj_versions$package, library, character.only = TRUE, warn.conflicts = FALSE)))
+
+  needs_update <- sj_versions$behind
+  sj_versions <- sj_versions[, c("package", "local")]
+
+  max_len_pkg <- max(nchar(sj_versions$package))
+  max_len_ver <- max(nchar(sj_versions$local))
+
+  insight::print_color("# Attaching packages (red = needs update)\n", "blue")
+
+  for (i in 1:nrow(sj_versions)) {
+    cat(paste0("* ", format(sj_versions$package[i], width = max_len_pkg)))
+    cat(" ")
+    insight::print_color(format(sj_versions$local[i], width = max_len_ver), ifelse(needs_update[i], "red", "green"))
+    cat("\n")
+  }
 }
 
 is_attached <- function(x) {
@@ -15,17 +30,15 @@ is_attached <- function(x) {
 }
 
 
-#' @importFrom dplyr filter
 #' @importFrom utils menu install.packages
 sj_update <- function() {
-
-  deps <- sj_deps()
-  behind <- dplyr::filter(deps, behind)
+  sj_pkgs <- sj_version()
+  behind <- sj_pkgs[sj_pkgs$behind, ]
 
   if (nrow(behind) == 0) return(invisible())
 
   message("The following packages are out of date:")
-  message(paste0(" * ", format(behind$package), " (", behind$local, " -> ", behind$cran, ")"), collapse = "\n")
+  message(paste0("* ", format(behind$package), " (", behind$local, " -> ", behind$cran, ")"), collapse = "\n")
 
   message("Update now?")
   do_it <- utils::menu(c("Yes", "No")) == 1
@@ -46,30 +59,32 @@ sj_update <- function() {
 
 #' @importFrom utils available.packages packageVersion
 #' @importFrom tools package_dependencies
-#' @importFrom purrr map2_lgl map_chr
-#' @importFrom tibble tibble
-sj_deps <- function() {
-  pkgs <- utils::available.packages()
-  deps <- tools::package_dependencies("tidyverse", pkgs, recursive = F)
+sj_version <- function() {
+  pkgs <- utils::available.packages(contriburl = contrib.url("https://cran.r-project.org", type = getOption("pkgType")))
+  sj_pkgs <- c("sjlabelled", "sjmisc", "sjstats", "sjPlot", "ggeffects", "esc")
+  sj_on_cran <- intersect(sj_pkgs, rownames(pkgs))
+  # sj_not_on_cran <- setdiff(sj_pkgs, sj_on_cran)
 
-  pkg_deps <- unique(sort(unlist(deps)))
+  cran_version <- lapply(pkgs[sj_on_cran, "Version"], package_version)
+  local_version <- lapply(sj_on_cran, utils::packageVersion)
+  # local_version_dev <- lapply(sj_not_on_cran, utils::packageVersion)
 
-  base_pkgs <- c(
-    "base", "compiler", "datasets", "graphics", "grDevices", "grid",
-    "methods", "parallel", "splines", "stats", "stats4", "tools", "tcltk",
-    "utils"
+  behind <- mapply('>', cran_version, local_version)
+
+  data.frame(
+    package = sj_on_cran,
+    cran = sapply(cran_version, as.character),
+    local = sapply(local_version, as.character),
+    behind = behind,
+    stringsAsFactors = FALSE,
+    row.names = NULL
   )
-  pkg_deps <- setdiff(pkg_deps, base_pkgs)
-
-  cran_version <- lapply(pkgs[pkg_deps, "Version"], package_version)
-  local_version <- lapply(pkg_deps, utils::packageVersion)
-
-  behind <- purrr::map2_lgl(cran_version, local_version, `>`)
-
-  tibble::tibble(
-    package = pkg_deps,
-    cran = purrr::map_chr(cran_version, as.character),
-    local = purrr::map_chr(local_version, as.character),
-    behind = behind
-  )
+    # data.frame(
+    #   package = sj_not_on_cran,
+    #   cran = NA,
+    #   local = sapply(local_version_dev, as.character),
+    #   behind = FALSE,
+    #   stringsAsFactors = FALSE,
+    #   row.names = NULL
+    # )
 }
