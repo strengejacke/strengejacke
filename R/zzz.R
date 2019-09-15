@@ -1,11 +1,13 @@
 .onAttach <- function(...) {
-  sj_versions <- sj_version()
+  pkgs <- utils::available.packages(contriburl = contrib.url("https://cran.r-project.org", type = getOption("pkgType")))
+  sj_versions <- sj_version(pkgs)
   sj_pkgs <- c("sjlabelled", "sjmisc", "sjstats", "sjPlot", "ggeffects", "esc")
   needed <- sj_pkgs[!is_attached(sj_pkgs)]
 
   if (length(needed) == 0)
     return()
 
+  easystats_versions <- .easystats_version(pkgs)
   sj_versions <- sj_versions[sj_versions$package %in% needed, ]
   suppressPackageStartupMessages(suppressWarnings(lapply(sj_versions$package, library, character.only = TRUE, warn.conflicts = FALSE)))
 
@@ -23,6 +25,10 @@
     insight::print_color(format(sj_versions$local[i], width = max_len_ver), ifelse(needs_update[i], "red", "green"))
     cat("\n")
   }
+
+  if (any(easystats_versions$behind)) {
+    insight::print_color(sprintf("\nFollowing packages should be updated: %s\n", paste0(c("d", "f", "g"), collapse = ", ")), color = "red")
+  }
 }
 
 is_attached <- function(x) {
@@ -30,12 +36,20 @@ is_attached <- function(x) {
 }
 
 
+#' Update sj!-packages from CRAN, if necessary.
+#'
+#' @importFrom insight print_color
 #' @importFrom utils menu install.packages
+#' @export
 sj_update <- function() {
-  sj_pkgs <- sj_version()
+  pkgs <- utils::available.packages(contriburl = contrib.url("https://cran.r-project.org", type = getOption("pkgType")))
+  sj_pkgs <- sj_version(pkgs)
   behind <- sj_pkgs[sj_pkgs$behind, ]
 
-  if (nrow(behind) == 0) return(invisible())
+  if (nrow(behind) == 0) {
+    insight::print_color("All sj!-packages are up to date!\n", "green")
+    return(invisible())
+  }
 
   message("The following packages are out of date:")
   message(paste0("* ", format(behind$package), " (", behind$local, " -> ", behind$cran, ")"), collapse = "\n")
@@ -59,8 +73,7 @@ sj_update <- function() {
 
 #' @importFrom utils available.packages packageVersion
 #' @importFrom tools package_dependencies
-sj_version <- function() {
-  pkgs <- utils::available.packages(contriburl = contrib.url("https://cran.r-project.org", type = getOption("pkgType")))
+sj_version <- function(pkgs) {
   sj_pkgs <- c("sjlabelled", "sjmisc", "sjstats", "sjPlot", "ggeffects", "esc")
   sj_on_cran <- intersect(sj_pkgs, rownames(pkgs))
   # sj_not_on_cran <- setdiff(sj_pkgs, sj_on_cran)
@@ -87,4 +100,26 @@ sj_version <- function() {
     #   stringsAsFactors = FALSE,
     #   row.names = NULL
     # )
+}
+
+
+#' @importFrom utils available.packages packageVersion
+#' @importFrom tools package_dependencies
+.easystats_version <- function(pkgs) {
+  easystats_pkgs <- c("insight", "bayestestR", "performance", "parameters", "see", "correlation", "estimate", "report")
+  easystats_on_cran <- intersect(easystats_pkgs, rownames(pkgs))
+
+  cran_version <- lapply(pkgs[easystats_on_cran, "Version"], package_version)
+  local_version <- lapply(easystats_on_cran, utils::packageVersion)
+
+  behind <- mapply('>', cran_version, local_version)
+
+  data.frame(
+    package = easystats_on_cran,
+    cran = sapply(cran_version, as.character),
+    local = sapply(local_version, as.character),
+    behind = behind,
+    stringsAsFactors = FALSE,
+    row.names = NULL
+  )
 }

@@ -12,17 +12,17 @@ Description: Quickly load the 'sj'-packages, which interoperate and complement e
              'sjPlot' and 'esc'.
 License: GPL-3
 Depends:
-    R (>= 3.2),
-    stats,
-    utils,
-    tools
+    R (>= 3.2)
 Imports:
     esc,
     ggeffects,
+    insight,
     sjlabelled,
     sjmisc,
     sjPlot,
-    sjstats
+    sjstats,
+    tools,
+    utils
 LazyData: true
 URL: https://github.com/strengejacke/strengejacke
 BugReports: https://github.com/strengejacke/strengejacke/issues
