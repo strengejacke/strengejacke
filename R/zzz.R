@@ -28,7 +28,7 @@
     cat("\n")
   }
 
-  if (length(easystats_versions)) {
+  if (nrow(easystats_versions) > 0) {
     insight::print_color(sprintf("\nFollowing packages should be updated: %s\n", paste0(easystats_versions$package, collapse = ", ")), color = "red")
   }
 }
