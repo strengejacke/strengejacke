@@ -2,7 +2,7 @@
 # strengejacke
 
 Wrapper to quickly load the sj-packages. The package checks for updates
-at each start.
+at each startup.
 
 Usage:
 
@@ -25,3 +25,9 @@ commands into the R console:
 library(devtools)
 devtools::install_github("strengejacke/strengejacke")
 ```
+
+## Downloads
+
+### Cumulative downloads
+
+<img src="man/figures/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
