@@ -9,12 +9,11 @@ Usage:
 ``` r
 library(strengejacke)
 #> # Attaching packages (red = needs update)
-#> * sjlabelled 1.1.1      
-#> * sjmisc     2.8.1.9000 
-#> * sjstats    0.17.6     
-#> * sjPlot     2.7.1      
-#> * ggeffects  0.12.0.9000
-#> * esc        0.5.0
+#> * ggeffects  0.12.0   * sjlabelled 1.1.2 
+#> * sjmisc     2.8.1    * sjstats    0.17.6     
+#> * sjPlot     2.7.1    * esc        0.5.0      
+#> 
+#> Update packages in red with 'sj_update()'.
 ```
 
 ## Installation
