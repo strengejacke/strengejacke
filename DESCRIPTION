@@ -17,6 +17,8 @@ Imports:
     stats,
     utils,
     tools
+Suggests:
+    devtools
 LazyData: true
 URL: https://github.com/strengejacke/strengejacke
 BugReports: https://github.com/strengejacke/strengejacke/issues

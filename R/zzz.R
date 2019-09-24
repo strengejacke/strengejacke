@@ -206,3 +206,25 @@ sj_update <- function(which = c("all", "core", "deps")) {
     )
   }
 }
+
+
+
+#' Install the strengejacke suite from github
+#'
+#' @importFrom devtools install_github
+#' @export
+install_sj_latest <- function() {
+  if (requireNamespace("devtools", quietly = TRUE)) {
+    devtools::install_github(
+      c("strengejacke/sjlabelled",
+        "strengejacke/sjstats",
+        "strengejacke/sjmisc",
+        "strengejacke/ggeffects",
+        "strengejacke/sjPlot"
+      )
+    )
+  } else {
+    message("Package \"devools\" required.")
+  }
+
+}
