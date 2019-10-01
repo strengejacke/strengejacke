@@ -221,7 +221,7 @@ install_sj_latest <- function() {
         "strengejacke/sjmisc",
         "strengejacke/ggeffects",
         "strengejacke/sjPlot"
-      )
+      ), upgrade = "never"
     )
   } else {
     message("Package \"devools\" required.")
