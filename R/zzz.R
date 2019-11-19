@@ -219,7 +219,7 @@ install_sj_latest <- function() {
         "strengejacke/sjmisc",
         "strengejacke/ggeffects",
         "strengejacke/sjPlot",
-        "strengejacke/esc",
+        "strengejacke/esc"
       ), upgrade = "never"
     )
   } else {
