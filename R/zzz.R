@@ -1,8 +1,6 @@
-load <- c("ggeffects", "sjlabelled", "sjmisc", "sjstats", "sjPlot")
-
 .onAttach <- function(...) {
   sj_versions <- .sj_version()
-  sj_pkgs <- c("ggeffects", "sjlabelled", "sjmisc", "sjstats", "sjPlot")
+  sj_pkgs <- c("ggeffects", "sjlabelled", "sjmisc", "sjstats", "sjPlot", "esc")
   needed <- sj_pkgs[!is_attached(sj_pkgs)]
 
   if (length(needed) == 0)
@@ -136,7 +134,7 @@ sj_update <- function(which = c("all", "core", "deps")) {
 
   deps <-
     tools::package_dependencies(
-      c("ggeffects", "sjlabelled", "sjmisc", "sjstats", "sjPlot"),
+      c("ggeffects", "sjlabelled", "sjmisc", "sjstats", "sjPlot", "esc"),
       pkgs,
       recursive = F
     )
@@ -177,7 +175,7 @@ sj_update <- function(which = c("all", "core", "deps")) {
     error = function(e) { NULL}
   )
 
-  sj_on_cran <- c("ggeffects", "sjlabelled", "sjmisc", "sjstats", "sjPlot")
+  sj_on_cran <- c("ggeffects", "sjlabelled", "sjmisc", "sjstats", "sjPlot", "esc")
 
   if (!is.null(pkgs)) {
     cran_version <- lapply(pkgs[sj_on_cran, "Version"], package_version)
@@ -220,7 +218,8 @@ install_sj_latest <- function() {
         "strengejacke/sjstats",
         "strengejacke/sjmisc",
         "strengejacke/ggeffects",
-        "strengejacke/sjPlot"
+        "strengejacke/sjPlot",
+        "strengejacke/esc",
       ), upgrade = "never"
     )
   } else {
