@@ -45,6 +45,7 @@
   }
 
   cat("\n")
+  if (.cran_checks()) cat("\n")
 
   if (any(needs_update)) {
     insight::print_color("Update packages in red with 'sj_update()'.\n", "yellow")
@@ -226,4 +227,31 @@ install_sj_latest <- function() {
     message("Package \"devools\" required.")
   }
 
+}
+
+
+#' @importFrom xml2 read_html
+#' @importFrom rvest html_table
+.cran_checks <- function() {
+  on_cran <- c("ggeffects", "sjlabelled", "sjmisc", "sjstats", "sjPlot", "esc")
+  error <- FALSE
+  tryCatch(
+    {
+      for (i in on_cran) {
+        url <- sprintf("https://cran.r-project.org/web/checks/check_results_%s.html", i)
+        html_page <- xml2::read_html(url)
+        html_table <- rvest::html_table(html_page)
+        check_status <- html_table[[1]]$Status
+
+        if (any(c("warning", "error") %in% tolower(check_status))) {
+          insight::print_color(sprintf("Warnings or errors in CRAN checks for package '%s'.\n", i), "red")
+          error <- TRUE
+        }
+      }
+
+      return(error)
+    },
+    warning = function(w) { return(FALSE) },
+    error = function(e) { return(FALSE) }
+  )
 }
