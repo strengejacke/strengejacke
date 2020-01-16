@@ -232,7 +232,7 @@ install_sj_latest <- function() {
 
 #' @importFrom xml2 read_html
 #' @importFrom rvest html_table
-.cran_checks <- function() {
+.cran_checks <- function(full = FALSE) {
   on_cran <- c("ggeffects", "sjlabelled", "sjmisc", "sjstats", "sjPlot", "esc")
   error <- FALSE
   tryCatch(
@@ -243,15 +243,52 @@ install_sj_latest <- function() {
         html_table <- rvest::html_table(html_page)
         check_status <- html_table[[1]]$Status
 
-        if (any(c("warning", "error") %in% tolower(check_status))) {
-          insight::print_color(sprintf("Warnings or errors in CRAN checks for package '%s'.\n", i), "red")
-          error <- TRUE
+        if (isTRUE(full)) {
+          all_ok <- TRUE
+          max_len <- max(nchar(on_cran))
+          i <- format(i, width = max_len)
+          cat(sprintf("%s ", i))
+
+          if (any("error" %in% tolower(check_status))) {
+            insight::print_color("Errors", "red")
+            error <- TRUE
+            all_ok <- FALSE
+          }
+          if (any("warning" %in% tolower(check_status))) {
+            if (!all_ok) cat(", ")
+            insight::print_color("Warnings", "red")
+            error <- TRUE
+            all_ok <- FALSE
+          }
+          if (any("note" %in% tolower(check_status))) {
+            if (!all_ok) cat(", ")
+            insight::print_color("Notes", "blue")
+            all_ok <- FALSE
+          }
+          if (isTRUE(all_ok)) {
+            insight::print_color("Ok", "green")
+          }
+          cat("\n")
+        } else {
+          if (any(c("warning", "error") %in% tolower(check_status))) {
+            insight::print_color(sprintf("Warnings or errors in CRAN checks for package '%s'.\n", i), "red")
+            error <- TRUE
+          }
         }
       }
 
-      return(error)
+      invisible(error)
     },
-    warning = function(w) { return(FALSE) },
-    error = function(e) { return(FALSE) }
+    warning = function(w) { invisible(FALSE) },
+    error = function(e) { invisible(FALSE) }
   )
+}
+
+
+
+#' Show CRAN check status for strengejacke-packages
+#'
+#' @export
+CRAN_checks <- function() {
+  .cran_checks(full = TRUE)
 }
