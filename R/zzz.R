@@ -282,7 +282,7 @@ install_sj_latest <- function() {
           }
           cat("\n")
         } else {
-          if (any(c("warning", "error") %in% tolower(check_status))) {
+          if (any(c("warn", "warning", "error") %in% tolower(check_status))) {
             insight::print_color(sprintf("Warnings or errors in CRAN checks for package '%s'.\n", i), "red")
             error <- TRUE
           }
