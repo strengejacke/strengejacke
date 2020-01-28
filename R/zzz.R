@@ -258,7 +258,7 @@ install_sj_latest <- function() {
             error <- TRUE
             all_ok <- FALSE
           }
-          if (any("warning" %in% tolower(check_status))) {
+          if (any(c("warn", "warning") %in% tolower(check_status))) {
             if (!all_ok) cat(", ")
             n <- sum("warning" == tolower(check_status))
             if (n == 1)
