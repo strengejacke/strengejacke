@@ -260,7 +260,7 @@ install_sj_latest <- function() {
           }
           if (any(c("warn", "warning") %in% tolower(check_status))) {
             if (!all_ok) cat(", ")
-            n <- sum("warning" == tolower(check_status))
+            n <- sum("warning" == tolower(check_status)) + sum("warn" == tolower(check_status))
             if (n == 1)
               insight::print_color("1 Warning", "red")
             else
