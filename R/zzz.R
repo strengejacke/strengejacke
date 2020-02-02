@@ -45,7 +45,7 @@
   }
 
   cat("\n")
-  # if (.cran_checks()) cat("\n")
+  .cran_checks()
 
   if (any(needs_update)) {
     insight::print_color("Update packages in red with 'sj_update()'.\n", "yellow")
