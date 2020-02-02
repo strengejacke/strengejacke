@@ -304,3 +304,45 @@ install_sj_latest <- function() {
 CRAN_checks <- function() {
   .cran_checks(full = TRUE)
 }
+
+
+
+#' Show weeks since last package update on CRAN
+#'
+#' Green indicates that enough time since last submission has passed and it's ok to submit an update, yellow means it's ok, but beware it's not too often, and red means that you should probably not yet submit an update.
+#'
+#' @export
+on_CRAN <- function() {
+  if (!requireNamespace("rvest", quietly = TRUE) && !requireNamespace("xml2", quietly = TRUE)) {
+    return(FALSE)
+  }
+
+  on_cran <- c("ggeffects", "sjlabelled", "sjmisc", "sjstats", "sjPlot", "esc")
+  error <- FALSE
+  tryCatch(
+    {
+      for (i in on_cran) {
+        url <- sprintf("https://cran.r-project.org/web/packages/%s/index.html", i)
+        html_page <- xml2::read_html(url)
+        html_table <- rvest::html_table(html_page)
+        published <- grepl("^Publish", html_table[[1]]$X1)
+        date <- html_table[[1]]$X2[published]
+        weeks_on_cran <- as.vector(difftime(as.POSIXct(Sys.Date()), as.POSIXct(date), units = "weeks"))
+        max_len <- max(nchar(on_cran))
+        i <- format(i, width = max_len)
+        cat(sprintf("%s ", i))
+        if (weeks_on_cran <= 4)
+          col <- "red"
+        else if (weeks_on_cran <= 8)
+          col <- "red"
+        else
+          col <- "green"
+        insight::print_color(sprintf("%.1f weeks\n", weeks_on_cran), col)
+      }
+    },
+    warning = function(w) { invisible(NULL) },
+    error = function(e) { invisible(NULL) }
+  )
+
+  invisible(NULL)
+}

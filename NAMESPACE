@@ -2,6 +2,7 @@
 
 export(CRAN_checks)
 export(install_sj_latest)
+export(on_CRAN)
 export(sj_update)
 importFrom(devtools,install_github)
 importFrom(rvest,html_table)
