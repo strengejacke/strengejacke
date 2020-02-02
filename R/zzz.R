@@ -45,7 +45,7 @@
   }
 
   cat("\n")
-  if (.cran_checks()) cat("\n")
+  # if (.cran_checks()) cat("\n")
 
   if (any(needs_update)) {
     insight::print_color("Update packages in red with 'sj_update()'.\n", "yellow")
@@ -235,6 +235,8 @@ install_sj_latest <- function() {
 .cran_checks <- function(full = FALSE) {
   on_cran <- c("ggeffects", "sjlabelled", "sjmisc", "sjstats", "sjPlot", "esc")
   error <- FALSE
+  error_pkgs <- c()
+
   tryCatch(
     {
       for (i in on_cran) {
@@ -283,10 +285,14 @@ install_sj_latest <- function() {
           cat("\n")
         } else {
           if (any(c("warn", "warning", "error") %in% tolower(check_status))) {
-            insight::print_color(sprintf("Warnings or errors in CRAN checks for package '%s'.\n", i), "red")
+            error_pkgs <- c(error_pkgs, i)
             error <- TRUE
           }
         }
+      }
+
+      if (error && !full) {
+        insight::print_color(sprintf("Warnings or errors in CRAN checks for package(s) %s.\n", paste0("'", error_pkgs, "'", collapse = ", ")), "red")
       }
 
       invisible(error)
