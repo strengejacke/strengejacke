@@ -337,9 +337,9 @@ on_CRAN <- function() {
         i <- format(i, width = max_len)
         cat(sprintf("%s ", i))
         if (weeks_on_cran <= 4)
-          col <- "yellow"
-        else if (weeks_on_cran <= 8)
           col <- "red"
+        else if (weeks_on_cran <= 8)
+          col <- "yellow"
         else
           col <- "green"
         insight::print_color(sprintf("%.1f weeks\n", weeks_on_cran), col)
