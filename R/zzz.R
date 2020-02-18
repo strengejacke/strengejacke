@@ -337,7 +337,7 @@ on_CRAN <- function() {
         i <- format(i, width = max_len)
         cat(sprintf("%s ", i))
         if (weeks_on_cran <= 4)
-          col <- "orange"
+          col <- "yellow"
         else if (weeks_on_cran <= 8)
           col <- "red"
         else
