@@ -324,7 +324,6 @@ on_CRAN <- function() {
   }
 
   on_cran <- c("ggeffects", "sjlabelled", "sjmisc", "sjstats", "sjPlot", "esc")
-  error <- FALSE
   tryCatch(
     {
       for (i in on_cran) {
@@ -338,7 +337,7 @@ on_CRAN <- function() {
         i <- format(i, width = max_len)
         cat(sprintf("%s ", i))
         if (weeks_on_cran <= 4)
-          col <- "red"
+          col <- "orange"
         else if (weeks_on_cran <= 8)
           col <- "red"
         else
