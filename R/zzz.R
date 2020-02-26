@@ -170,7 +170,7 @@ sj_update <- function(which = c("all", "core", "deps")) {
 .sj_version <- function() {
   pkgs <- tryCatch(
     {
-      utils::available.packages(contriburl = contrib.url("https://cran.r-project.org", type = getOption("pkgType")))
+      utils::available.packages(contriburl = contrib.url("https://cloud.r-project.org", type = getOption("pkgType")))
     },
     warning = function(w) { NULL },
     error = function(e) { NULL}
@@ -240,7 +240,7 @@ install_sj_latest <- function() {
   tryCatch(
     {
       for (i in on_cran) {
-        url <- sprintf("https://cran.r-project.org/web/checks/check_results_%s.html", i)
+        url <- sprintf("https://cloud.r-project.org/web/checks/check_results_%s.html", i)
         html_page <- xml2::read_html(url)
         html_table <- rvest::html_table(html_page)
         check_status <- html_table[[1]]$Status
@@ -327,7 +327,7 @@ on_CRAN <- function() {
   tryCatch(
     {
       for (i in on_cran) {
-        url <- sprintf("https://cran.r-project.org/web/packages/%s/index.html", i)
+        url <- sprintf("https://cloud.r-project.org/web/packages/%s/index.html", i)
         html_page <- xml2::read_html(url)
         html_table <- rvest::html_table(html_page)
         published <- grepl("^Publish", html_table[[1]]$X1)
