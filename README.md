@@ -26,12 +26,12 @@ Here are some of the projects I'm working on:
 
 ### Data Visualization
 
-- [**ggeffects**](https://github.com/strengejacke/ggeffects) Estimated marginal means and effects plots for regression models
-- [**sjPlot**](https://github.com/strengejacke/sjPlot) Plots and tables for summary statistics, descriptive statistics and regression models
+- [**ggeffects**](https://github.com/strengejacke/ggeffects): Estimated marginal means and effects plots for regression models
+- [**sjPlot**](https://github.com/strengejacke/sjPlot): Plots and tables for summary statistics, descriptive statistics and regression models
 - [**see**](https://github.com/easystats/see): 🎨 Visualisation toolbox for beautiful and publication-ready figures
 
 ### Data Transformation and Wrangling
 
-- [**sjmisc**](https://github.com/strengejacke/sjmisc) Utilities for data and variable transformation and recoding
+- [**sjmisc**](https://github.com/strengejacke/sjmisc): Utilities for data and variable transformation and recoding
 
 [![My github stats](https://github-readme-stats.vercel.app/api?username=strengejacke&count_private=true&show_icons=true&theme=onedark)](https://github.com/anuraghazra/github-readme-stats)
