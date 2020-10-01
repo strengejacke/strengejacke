@@ -5,7 +5,7 @@
 [![Research gate](https://img.shields.io/badge/-Research%20Gate-green.svg?style=flat-square&logo=researchgate&logoColor=white&colorB=616161&labelColor=00BFA5)](https://www.researchgate.net/profile/Daniel_Luedecke)
 
 
-Currently, I'm mostly involved in projects related to R statistics (through the [**easystats project**](https://easystats.github.io/easystats/) or my other packages like [**ggeffects**](http://strengejacke.github.io/ggeffects)). However, my previous main activity in developing research software was the [**Zettelkasten**](https://github.com/sjPlot/Zettelkasten/), in Java.
+Currently, I'm mostly involved in projects related to R statistics (through the [**easystats project**](https://easystats.github.io/easystats/) or my other packages like [**ggeffects**](http://strengejacke.github.io/ggeffects)). However, my previous main activity in developing research software was the [**Zettelkasten**](https://github.com/Zettelkasten-Team/Zettelkasten/), in Java.
 
 You can find further information on my website:
 
