@@ -3,8 +3,9 @@
   sj_pkgs <- c("ggeffects", "sjlabelled", "sjmisc", "sjstats", "sjPlot", "esc")
   needed <- sj_pkgs[!is_attached(sj_pkgs)]
 
-  if (length(needed) == 0)
+  if (length(needed) == 0) {
     return()
+  }
 
   sj_versions <- sj_versions[sj_versions$package %in% needed, ]
   suppressPackageStartupMessages(suppressWarnings(lapply(sj_versions$package, library, character.only = TRUE, warn.conflicts = FALSE)))
@@ -29,10 +30,11 @@
   symbol_warning <- "\u26A0 "
 
   for (i in 1:nrow(sj_versions)) {
-    if (needs_update[i])
+    if (needs_update[i]) {
       insight::print_color(symbol_warning, "red")
-    else
+    } else {
       insight::print_color(symbol_tick, "green")
+    }
 
     cat(format(sj_versions$package[i], width = max_len_pkg))
     cat(" ")
