@@ -53,4 +53,6 @@ Here are the main projects I'm working on:
 - [**sjPlot**](http://strengejacke.github.io/sjPlot): Plots and tables for summary statistics, descriptive statistics and regression models
 - [**see**](https://easystats.github.io/see): 🎨 Visualisation toolbox for beautiful and publication-ready figures
 
+<!--
 [![My github stats](https://github-readme-stats.vercel.app/api?username=strengejacke&count_private=true&show_icons=true&theme=onedark)](https://github.com/anuraghazra/github-readme-stats)
+//-->
