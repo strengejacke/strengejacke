@@ -4,12 +4,39 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/strengejacke?label=%20%40strengejacke&style=flat-square&labelColor=2196F3&logo=twitter&logoColor=white&colorB=0D47A1)](https://twitter.com/strengejacke)
 [![Research gate](https://img.shields.io/badge/-Research%20Gate-green.svg?style=flat-square&logo=researchgate&logoColor=white&colorB=616161&labelColor=00BFA5)](https://www.researchgate.net/profile/Daniel_Luedecke)
 
+I'm a researcher working in the Institute of Medical Sociology [(IMS)](https://www.uke.de/english/departments-institutes/institutes/medical-sociology/index.html) at the University Medical Center Hamburg-Eppendorf [(UKE)](https://www.uke.de/english/index.html). I chair the working group on health and health care among the aged.
 
-Currently, I'm mostly involved in projects related to R statistics (through the [**easystats project**](https://easystats.github.io/easystats/) or my other packages like [**ggeffects**](http://strengejacke.github.io/ggeffects)). However, my previous main activity in developing research software was the [**Zettelkasten**](https://github.com/Zettelkasten-Team/Zettelkasten/), in Java.
+My research interests are
+- Health and health care among the aged
+- Family carers of older people
+- Organizational behaviour and health care research
+- Social inequalities in health care
+
+## Scientific profiles
+
+  <p>
+  	<a href="http://www.uke.de/kliniken-institute/institute/medizinische-soziologie/team/profil_daniel_luedecke_ims.html"><img src="http://www.danielluedecke.de/img/uke_small.png" /></a>
+  	&nbsp;&nbsp;&nbsp;
+  	<a href="https://orcid.org/0000-0002-8895-3206"><img src="http://www.danielluedecke.de/img/orcid_small.png" /></a>
+  	&nbsp;&nbsp;&nbsp;
+  	<a href="https://github.com/strengejacke"><img src="http://www.danielluedecke.de/img/github_small.png" /></a>
+  	&nbsp;&nbsp;&nbsp;  	
+  	<a href="https://twitter.com/strengejacke"><img src="http://www.danielluedecke.de/img/twitter_small.png" /></a>
+  	&nbsp;&nbsp;&nbsp;
+  	<a href="http://www.researchgate.net/profile/Daniel_Luedecke/"><img src="http://www.danielluedecke.de/img/rg_small.png" /></a>
+  </p>
 
 You can find further information on my website:
 
 👉👉 <a href="http://www.danielluedecke.de/"><b>www.danielluedecke.de</b></a> 👈👈
+
+## Statistical skills
+
+
+
+Currently, I'm mostly involved in projects related to R statistics (through the [**easystats project**](https://easystats.github.io/easystats/) or my other packages like [**ggeffects**](http://strengejacke.github.io/ggeffects)). However, my previous main activity in developing research software was the [**Zettelkasten**](https://github.com/Zettelkasten-Team/Zettelkasten/), in Java.
+
+
 
 Here are some of the projects I'm working on:
 
