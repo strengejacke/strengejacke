@@ -4,7 +4,7 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/strengejacke?label=%20%40strengejacke&style=flat-square&labelColor=2196F3&logo=twitter&logoColor=white&colorB=0D47A1)](https://twitter.com/strengejacke)
 [![Research gate](https://img.shields.io/badge/-Research%20Gate-green.svg?style=flat-square&logo=researchgate&logoColor=white&colorB=616161&labelColor=00BFA5)](https://www.researchgate.net/profile/Daniel_Luedecke)
 
-I'm a researcher working in the Institute of Medical Sociology [(IMS)](https://www.uke.de/english/departments-institutes/institutes/medical-sociology/index.html) at the University Medical Center Hamburg-Eppendorf [(UKE)](https://www.uke.de/english/index.html). I chair the working group on health and health care among the aged.
+I'm a senior researcher working in the Institute of Medical Sociology [(IMS)](https://www.uke.de/english/departments-institutes/institutes/medical-sociology/index.html) at the University Medical Center Hamburg-Eppendorf [(UKE)](https://www.uke.de/english/index.html). I chair the working group on health and health care among the aged.
 
 My research interests are
 - Health and health care among the aged
@@ -12,7 +12,7 @@ My research interests are
 - Organizational behaviour and health care research
 - Social inequalities in health care
 
-## Scientific profiles
+## Scientific and social media profiles
 
   <p>
   	<a href="http://www.uke.de/kliniken-institute/institute/medizinische-soziologie/team/profil_daniel_luedecke_ims.html"><img src="http://www.danielluedecke.de/img/uke_small.png" /></a>
@@ -32,13 +32,9 @@ You can find further information on my website:
 
 ## Statistical skills
 
+I'm co-chairing the working group "Methods" of the German Society of Medical Sociology [(AG Methoden / DGMS)](https://www.dgms.de/arbeitsgruppen/methoden/) and do a lot R programminh. Currently, I'm mostly involved in projects related to R statistics (through the [**easystats project**](https://easystats.github.io/easystats/) or my other packages like [**ggeffects**](http://strengejacke.github.io/ggeffects)). However, my previous main activity in developing research software was the [**Zettelkasten**](https://github.com/Zettelkasten-Team/Zettelkasten/), in Java.
 
-
-Currently, I'm mostly involved in projects related to R statistics (through the [**easystats project**](https://easystats.github.io/easystats/) or my other packages like [**ggeffects**](http://strengejacke.github.io/ggeffects)). However, my previous main activity in developing research software was the [**Zettelkasten**](https://github.com/Zettelkasten-Team/Zettelkasten/), in Java.
-
-
-
-Here are some of the projects I'm working on:
+Here are the main projects I'm working on:
 
 ### Statistics
 
