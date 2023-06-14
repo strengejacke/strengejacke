@@ -36,22 +36,26 @@ I'm co-chairing the working group "Methods" of the German Society of Medical Soc
 
 Here are the main R-package projects I'm working on:
 
-### Statistics
+### Data wrangling and preparation
 
-- [**report**](https://easystats.github.io/report): 📜 🎉 Automated reporting of objects in R
-- [**bayestestR**](https://easystats.github.io/bayestestR): 👻 Utilities for analyzing Bayesian models and posterior distributions
-- [**correlation**](https://easystats.github.io/correlation): 🔗 Methods for Correlation Analysis
-- [**modelbased**](https://easystats.github.io//modelbased): 📈 Estimate effects, contrasts and means based on statistical models
-- [**effectsize**](https://easystats.github.io/effectsize): 🐉 Compute and work with indices of effect size and standardized parameters
+- [**datawizard**](https://easystats.github.io/datawizard/) 🧙 Magic potions to clean and transform your data
+
+### Statistics and regression modelling
+
 - [**parameters**](https://easystats.github.io/parameters): 📊 Computation and processing of models' parameters
 - [**performance**](https://easystats.github.io/performance): 💪 Models' quality and performance metrics (R2, ICC, LOO, AIC, BF, ...)
+- [**bayestestR**](https://easystats.github.io/bayestestR): 👻 Utilities for analyzing Bayesian models and posterior distributions
+- [**effectsize**](https://easystats.github.io/effectsize): 🐉 Compute and work with indices of effect size and standardized parameters
+- [**correlation**](https://easystats.github.io/correlation): 🔗 Methods for Correlation Analysis
+- [**modelbased**](https://easystats.github.io//modelbased): 📈 Estimate effects, contrasts and means based on statistical models
+- [**report**](https://easystats.github.io/report): 📜 🎉 Automated reporting of objects in R
 - [**insight**](https://easystats.github.io/insight): 🔮 Easy access to model information for various model objects
 
 ### Data Visualization
 
 - [**ggeffects**](http://strengejacke.github.io/ggeffects): Estimated marginal means and effects plots for regression models
-- [**sjPlot**](http://strengejacke.github.io/sjPlot): Plots and tables for summary statistics, descriptive statistics and regression models
 - [**see**](https://easystats.github.io/see): 🎨 Visualisation toolbox for beautiful and publication-ready figures
+- [**sjPlot**](http://strengejacke.github.io/sjPlot): Plots and tables for summary statistics, descriptive statistics and regression models
 
 <!--
 [![My github stats](https://github-readme-stats.vercel.app/api?username=strengejacke&count_private=true&show_icons=true&theme=onedark)](https://github.com/anuraghazra/github-readme-stats)
