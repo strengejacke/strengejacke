@@ -34,7 +34,7 @@ including a [list of publications](http://danielluedecke.de/publikationen.php).
 
 ## Statistical skills
 
-I'm co-chairing the working group "Methods" of the German Society of Medical Sociology [(AG Methoden / DGMS)](https://www.dgms.de/arbeitsgruppen/methoden/) and do a lot R programminh. Currently, I'm mostly involved in projects related to R statistics (through the [**easystats project**](https://easystats.github.io/easystats/) or my other packages like [**ggeffects**](http://strengejacke.github.io/ggeffects)). However, my previous main activity in developing research software was the [**Zettelkasten**](https://github.com/Zettelkasten-Team/Zettelkasten/), in Java.
+I'm co-chairing the working group "Research Methods" of the German Society of Medical Sociology [(AG Methoden / DGMS)](https://www.dgms.de/arbeitsgruppen/methoden/) and do a lot R programming. Currently, I'm mostly involved in projects related to R statistics (through the [**easystats project**](https://easystats.github.io/easystats/) or my other packages like [**ggeffects**](http://strengejacke.github.io/ggeffects)). However, my previous main activity in developing research software was the [**Zettelkasten**](https://github.com/Zettelkasten-Team/Zettelkasten/), in Java.
 
 Here are the main R-package projects I'm working on:
 
