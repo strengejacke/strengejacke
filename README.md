@@ -28,7 +28,9 @@ My research interests are
 
 You can find further information on my website:
 
-👉👉 <a href="http://www.danielluedecke.de/"><b>www.danielluedecke.de</b></a> 👈👈
+👉👉 [**www.danielluedecke.de**](http://www.danielluedecke.de/) 👈👈
+
+including a [list of publications](http://danielluedecke.de/publikationen.php).
 
 ## Statistical skills
 
