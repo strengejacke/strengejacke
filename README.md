@@ -52,10 +52,11 @@ Here are the main R-package projects I'm working on:
 - [**modelbased**](https://easystats.github.io//modelbased): 📈 Estimate effects, contrasts and means based on statistical models
 - [**report**](https://easystats.github.io/report): 📜 🎉 Automated reporting of objects in R
 - [**insight**](https://easystats.github.io/insight): 🔮 Easy access to model information for various model objects
+- [**sjstats**](https://strengejacke.github.io/sjstats): Effect size measures and significance tests
 
 ### Data Visualization
 
-- [**ggeffects**](http://strengejacke.github.io/ggeffects): Estimated marginal means and effects plots for regression models
+- [**ggeffects**](http://strengejacke.github.io/ggeffects): Estimated marginal means, contrasts and pairwise comparisons and effects plots for regression models
 - [**see**](https://easystats.github.io/see): 🎨 Visualisation toolbox for beautiful and publication-ready figures
 - [**sjPlot**](http://strengejacke.github.io/sjPlot): Plots and tables for summary statistics, descriptive statistics and regression models
 
