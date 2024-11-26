@@ -21,7 +21,7 @@ My research interests are
   	&nbsp;&nbsp;&nbsp;
   	<a href="https://github.com/strengejacke"><img src="http://www.danielluedecke.de/img/github_small.png" /></a>
   	&nbsp;&nbsp;&nbsp;  	
-  	<a href="https://twitter.com/strengejacke"><img src="http://www.danielluedecke.de/img/twitter_small.png" /></a>
+  	<a href="https://bsky.app/profile/strengejacke.bsky.social"><img src="http://www.danielluedecke.de/img/bluesky_small.png" /></a>
   	&nbsp;&nbsp;&nbsp;
   	<a href="http://www.researchgate.net/profile/Daniel_Luedecke/"><img src="http://www.danielluedecke.de/img/rg_small.png" /></a>
   </p>
