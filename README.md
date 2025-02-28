@@ -1,7 +1,7 @@
 # Hello there!
 
 [![GitHub followers](https://img.shields.io/github/followers/strengejacke?label=Follow%20me&style=flat-square&logo=github&logoColor=white&colorB=4CAF50)](https://github.com/login?return_to=%2Fstrengejacke)
-[![Twitter Follow](https://img.shields.io/twitter/follow/strengejacke?label=%20%40strengejacke&style=flat-square&labelColor=2196F3&logo=twitter&logoColor=white&colorB=0D47A1)](https://twitter.com/strengejacke)
+[![BlueSky Follow](https://img.shields.io/twitter/follow/strengejacke?label=%20%40strengejacke&style=flat-square&labelColor=2196F3&logo=twitter&logoColor=white&colorB=0D47A1)](https://bsky.app/profile/strengejacke.bsky.social)
 [![Research gate](https://img.shields.io/badge/-Research%20Gate-green.svg?style=flat-square&logo=researchgate&logoColor=white&colorB=616161&labelColor=00BFA5)](https://www.researchgate.net/profile/Daniel_Luedecke)
 
 I'm a senior researcher working in the Institute of Medical Sociology [(IMS)](https://www.uke.de/english/departments-institutes/institutes/medical-sociology/index.html) at the University Medical Center Hamburg-Eppendorf [(UKE)](https://www.uke.de/english/index.html). I chair the working group on health and health care among the aged.
