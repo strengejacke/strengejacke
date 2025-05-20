@@ -1,8 +1,8 @@
 # Hi, I'm Daniel Lüdecke 👋
 
 *Senior Researcher @ [Institute of Medical Sociology, UKE](https://www.uke.de/english/departments-institutes/institutes/medical-sociology/index.html)*  
-*Chair, Working Group on Health and Health Care among the Aged*  
-*Quantitative analysis | R enthusiast | Occasional meme creator (in plots)*
+*Chair of the Working Group on Health and Health Care among the Aged*  
+*Quantitative and qualitative analysis | R enthusiast | Occasional meme creator (in plots)*
 
 ---
 
